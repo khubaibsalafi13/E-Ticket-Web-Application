@@ -62,7 +62,7 @@ for(let item of seat){
             }
             
            
-        // Set Color on Seat        
+    
      
 
          
@@ -83,9 +83,10 @@ btn.addEventListener('click',function(){
         const discountvalue = totalAmount *15/100;
         const mainGrandPrice = totalAmount - discountvalue;
         grandPrice.innerText = mainGrandPrice;
+        inputFeild.value = ' '
 
     }
-    if(inputFeildConvert == 'Couple20'){
+    if(inputFeildConvert =='COUPLECODE'){
         const grandPrice = document.getElementById('grandPrice')
         const discount = totalAmount * 20/100;
         const mainGrandPrice = totalAmount -discount;
@@ -104,18 +105,21 @@ btn.addEventListener('click',function(){
 
 const modalBtn = document.getElementById('modal-btn');
 modalBtn.addEventListener('click',function(){
-const phoneNumberElement = document.getElementById('phoneNumber')
-const phoneNumberValue = phoneNumberElement.value
-if(phoneNumberValue ==='number'){
-
 const body = document.getElementById('body');
 body.classList.add('hidden')
 
 const modal = document.getElementById('modal');
 modal.classList.remove('hidden')
-}
 
+const reLoop = document.getElementById('reLoop');
+reLoop.addEventListener('click',function(){
 
+    const body = document.getElementById('body');
+    body.classList.remove('hidden')
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden')
+
+})
 
 
     
