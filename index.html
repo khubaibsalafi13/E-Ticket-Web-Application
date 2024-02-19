@@ -32,12 +32,50 @@
           color: rgb(111, 111, 111);
           cursor: pointer;
         }
+        .seat1{
+          background-color: rgb(243, 243, 243);
+          padding: 5px 15px;
+          border-radius: 10px;
+          color: rgb(111, 111, 111);
+          cursor: pointer;
+        }
         .seat-class{
           color: rgb(119, 119, 119);
         }
+
+      .brand-color{
+        color:#1DD100;
+      }
+      .flex{
+        display: flex;
+        justify-content:space-between;
+      }
     </style>
 </head>
 <body>
+
+  <div id="modal" class="hidden container mx-auto px-0 lg:px-[130px]">
+    <!-- Modal Section Start Here -->
+        <div class="flex justify-center ">
+          <div class=" w-[718] h-[481] p-20 bg-base-100 shadow-xl space-y-10 rounded-[30px]">
+          <figure class="px-10 pt-10 flex justify-center">
+            <img src="images/success.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title text-3xl text-[#27AE60]">SUCCESS</h2>
+            <h3 class="text-[20px] font-bold text-black">Thank you for Booking Our Bus Seats. 
+              We are working hard to find the best service and deals for you</h3>
+            <p>Shortly you will find a confirmation in your email.</p>
+            <div class="card-actions">
+              <button class="btn text-white bg-[#27AE60]">Continue</button>
+            </div>
+          </div>
+          </div>
+        </div>
+    <!-- Modal Section Start Here -->
+    </div>
+    
+  <div id="body">
 
 <div class="container mx-auto px-0 lg:px-[130px]">
 <!-- Header Section -->
@@ -59,7 +97,7 @@
         
             </ul>
         </div>
-        <a class="btn btn-ghost text-xl"> <h1 class="font-extrabold text-2xl">P-Ticket</h1></a>
+        <a class="btn btn-ghost text-xl"> <h1 class="font-extrabold text-2xl">E-Ticket</h1></a>
         </div>
         <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -87,9 +125,9 @@
             <div class="hero-overlay  h-[350px] lg:h-[550px] rounded-3xl bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
             <div class="max-w-lg">
-                <h1 class="mb-5 text-5xl font-bold text-white">End-to-End Travel with <span class="text-green-500">P Paribahan</span></h1>
+                <h1 class="mb-5 text-5xl font-bold text-white">End-to-End Travel with <span class="text-green-500">E Paribahan</span></h1>
                 <p class="mb-5 text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class=" bg-green-400  px-6 py-4 rounded-lg text-black font-bold">Get Started</button>
+                <button ><a href="#ticket-buy" class=" bg-green-400  px-6 py-4 rounded-lg text-black font-bold">Get Start</a></button>
             </div>
             </div>
         </div>
@@ -126,7 +164,7 @@
       <div
         class="bg-[#F78C9C] flex w-[588px] rounded-lg justify-center items-center">
         <p class="mr-14">
-          <span class="font-extrabold text-4xl">15% OFF</span> <br /><span
+          <span class="font-extrabold text-4xl">20% OFF</span> <br /><span
             class="font-semibold"
             >on your next purchase </span
           ><br />
@@ -134,7 +172,7 @@
         </p>
         <img src="images/cupon-devider.png" alt="cupon-devider" />
         <p class="ml-9">
-          <span class="font-bold text-2xl">NEW15</span> <br /><span
+          <span class="font-bold text-2xl">Couple Code</span> <br /><span
             class="text-slate-500"
             >Coupon Code</span
           >
@@ -160,10 +198,10 @@
 </div>
 
 
-<section >
+<section id="ticket-buy" >
 
     <div class=" px-4 container mx-auto lg:px-[130px]">
-        <div class="bg-[#F7F8F8] py-[80px] rounded-t-[60px]">
+        <div class="bg-[#F7F8F8] py-[80px] rounded-t-[60px] border-t-2 border-[#1DD100]">
             <div class="text-center space-y-4 mb-12">
                 <h2 class="text-3xl font-extrabold text-center">Ph Poribohon</h2>
                 <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -181,7 +219,7 @@
                         </div>
 
                         <div>
-                            <div class="bg-green-100 flex items-center px-4 py-2 rounded-md text-green-500 font-bold "> <img src="images/seat-green.png" alt=""> <span>40 Seat Left</span> </div>
+                            <div class="bg-green-100 flex items-center px-4 py-2 rounded-md text-green-500 font-bold "> <img src="images/seat-green.png" alt=""> <p><span id="seat-count">40</span>Seat Left</p></div>
                         </div>
                     </div>
                     <div class="h-[200px] mt-4  space-y-4">
@@ -214,8 +252,8 @@
               <!-- work Here -->
             <div class="bg-white flex justify-around p-8 w-[90%] mx-auto mt-8">
                   <!-- left Side  -->
-                  <div class="flex flex-col space-y-6">
-                    <div class="bg-white h-[300px] space-y-4">
+                  <div class="flex flex-col justify-start space-y-16  gap-0">
+                    <div class=" h-[200px] space-y-4">
                 
                       <p class="text-3xl font-bold text-black">Select Your Seat</p>
                       <div class=" border border-dashed border-gray-200"></div>
@@ -233,12 +271,12 @@
 
                       <div class="flex justify-between items-center">
                         <div> </div>
-                        <div class="seat"><img src="images/tabler-icon-steering-wheel@2x.png" alt=""></div>
+                        <div class="seat1 cursor-not-allowed"><img src="images/tabler-icon-steering-wheel@2x.png" alt=""></div>
 
                       </div>
                        
                     </div>
-                  <div class="flex justify-between space-x-10 bg-white w-[100%]">
+                  <div class="flex justify-between space-x-10  w-[100%]">
                    <div class="flex space-x-8">
                      <!-- Serial  -->
                      <div class="seat-class text-3xl space-y-[27px]">
@@ -327,40 +365,39 @@
                         <p class="font-bold">Select Your Seat</p>
                         <div class=" border border-dashed border-gray-200"></div>
                       </div>
-                      <div class="bg-gray-200 rounded-lg p-8 space-y-4">
+                      <div id="select-seat-area" class="bg-gray-100 rounded-lg p-8 space-y-4">
                         <div class=" flex justify-between">
                           
-                          <div> <div class="flex justify-center items-center"><p>Seat</p> <Span>2</Span></div>
+                          <div> <div class="flex justify-center items-center space-x-1"><p>Seat</p> <Span class="bg-green-400 px-[8px] py-0 rounded-md"  id="seatinc">0</Span></div>
                           </div>
                           <div><p>class</p></div>
                           <div><p>Price</p></div>
                         </div>
                         <div class=" border border-dashed border-gray-200"></div>
-                        <div class=" flex justify-between">
+                        <div id="daynamicSeat" class="">
                           
-                          <div><p>C2</p></div>
-                          <div><p>Economy</p></div>
-                          <div><p>550</p></div>
-                        </div>
-                        <div class=" border border-dashed border-gray-200"></div>
-                        <div class=" flex justify-between">
-                          
-                          <div><p>C2</p></div>
-                          <div><p>Economy</p></div>
-                          <div><p>550</p></div>
+                      
                         </div>
                         <div class=" border border-solid border-gray-800"></div>
                         <div class=" flex justify-between">
                           
-                          <div><p class="font-extrabold">Total Price</p></div>
+                          <div><p id="" class="font-extrabold">Total Price</p></div>
                           
-                          <div class="font-extrabold"><p>BDT <span>1100</span></p></div>
+                          <div class="font-extrabold"><p>BDT<span id="totalPrice">00</span></p></div>
                          
                         </div>
                         <div class="bg-gray-50 flex justify-between items-center  rounded-lg">
-                          <input type="text " class="bg-gray-50 w-[100%] h-[100%] px-2 py-2 rounded-lg outline-none">
-                          <button class="bg-green-500 px-4 py-2 rounded-md text-white"><p>Apply</p></button>
+                          <input type="text" id="input-feild" class="bg-white w-[100%] h-[100%] px-2 py-2 rounded-lg outline-none">
+                          <button class="bg-green-500 px-4 py-2 rounded-md text-white"><p id="applyBtn">Apply</p></button>
                         </div>
+                        <div class=" flex justify-between">
+                          
+                          <div><p class="font-extrabold">Grand Total</p></div>
+                          <div class="font-extrabold"><p> BDT<span id="grandPrice">00</span></p></div>
+                         
+                        </div>
+
+
                       </div>
                       
                     </div>
@@ -368,12 +405,12 @@
                     <div class="bg-white p-6">
                       <form action="" class="space-y-4 font-bold">
                       <label class="block font-bold" for="">Passenger Name*</label>
-                      <input class="block font-bold w-[100%] py-3 rounded-md border border-gray-200" type="text">
+                      <input  class="block font-bold w-[100%] py-3 rounded-md border border-gray-200" type="text" required = text;>
                       <label class="block font-bold" for="">Phone Number*</label>
-                      <input class="block font-bold w-[100%] py-3 rounded-md border border-gray-200" type="text">
+                      <input id="phoneNumber" class="block font-bold w-[100%] py-3 rounded-md border border-gray-200" type="number" required = number;>
                       <label class="block font-bold" for="">Email Id*</label>
                       <input class=" font-bold w-[100%] py-3 rounded-md border border-gray-200" type="text">
-                      <button class="bg-green-400 w-[100%] py-3 rounded-lg text-white" > next</button>
+                      <button id="modal-btn" disabled  class="bg-gray-300 w-[100%] py-3 rounded-lg text-white" > next</button>
                       </form>
                       <div class="flex justify-between mt-4 cursor-pointer">
                         <p class="underline">Tearm And Conditon</p>
@@ -392,6 +429,44 @@
 
 
 
+
+
+
+
+<!-- Footer Section Start Here -->
+<footer class="bg-black text-white">
+
+  <div class="container mx-auto px-0 py-20 lg:px-[130px] space-y-12">
+    <div class="flex justify-between">
+      <div>
+        <h3 class="text-4xl font-extrabold mb-4">E-Ticket</h3>
+        <p>E-Ticket is a digital platform to make your daily commuting better.</p>
+      </div>
+      <div>
+        <p>Dowload Our App</p>
+        <img src="images/Group 104.png" alt="">
+      </div>
+    </div>
+    <div class=" border border-dashed border-gray-200"></div>
+    <div class="flex justify-between">
+      <div>
+      
+        <p class="space-x-4 text-gray-400">@all rights reserved, E-Ticket services limited.2024.</p>
+      </div>
+      <div class="space-x-4 text-gray-300">
+        <a href="#">Tearm Conditon</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Privacy Policy</a>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+</footer>
+<!-- Footer Section End Here -->
+
+<script src="script.js"></script>
 
 
 </body>
