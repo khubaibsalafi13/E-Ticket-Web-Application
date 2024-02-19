@@ -111,19 +111,13 @@ body.classList.add('hidden')
 const modal = document.getElementById('modal');
 modal.classList.remove('hidden')
 
-const reLoop = document.getElementById('reLoop');
-reLoop.addEventListener('click',function(){
 
-    const body = document.getElementById('body');
-    body.classList.remove('hidden')
-    const modal = document.getElementById('modal');
-    modal.classList.add('hidden')
 
 })
 
 
     
-})
+
 
 
 
